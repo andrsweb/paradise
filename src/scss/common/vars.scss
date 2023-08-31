@@ -5,14 +5,16 @@ $md	: 768px;
 $lg	: 992px;
 $xl	: 1200px;
 $xxl: 1366px;
+$xxxl: 1695px;
 
 // Container max-width.
 $container-md: 760px;
 $container-lg: 990px;
 $container-xl: 1200px;
+$container-xl: 1765px;
 
 // Container padding.
-$container-padding: 24px;
+$container-padding: 35px;
 
 // Font families.
 $ff			: 'JetBrains Mono', sans-serif;
@@ -40,5 +42,7 @@ $input-bg  : #EEEEEE;
 $grey      : #D9D9D933;
 
 // Others.
-$tr: 0.35s;
-$op: 0.7;
+$tr     : 0.35s;
+$op     : 0.7;
+$bord25 : 25px;
+$bord9  : 9px;

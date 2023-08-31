@@ -1,0 +1,19 @@
+.input {
+	width: 532px;
+	color: $input-txt;
+	font-family: $ff;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: $fw-regular;
+	line-height: 49.667%;
+	border-radius: $bord9;
+	border: 0.745px solid rgba(0, 0, 0, 0.10);
+	background-color: $input-bg;
+	padding: 15px 0;
+	text-align: center;
+
+	&::placeholder {
+		text-align: center;
+		opacity: 1;
+	}
+}
