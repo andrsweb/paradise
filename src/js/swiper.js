@@ -14,17 +14,13 @@ const swiperInit = (selector) => {
 	const swiper = new Swiper(selector, {
 		modules: [Navigation, EffectFade],
 
-		mousewheel: {
-			invert: false,
-		},
-
 		navigation: {
 			nextEl: '.calendar__next',
 			prevEl: '.calendar__prev',
 		},
 
 		effect: "fade",
-		speed: 1200
+		speed: 600
 	})
 
 	swiper.on('reachBeginning', () => {
