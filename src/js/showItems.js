@@ -22,6 +22,6 @@ const showMoreCards = ( button ) => {
 			cards[i].classList.add( 'visible' )
 		}
 
-		if ( cards.length <= 9 ) cardsButton.remove()
+		if ( cards.length <= 10 ) cardsButton.remove()
 	} )
 }
