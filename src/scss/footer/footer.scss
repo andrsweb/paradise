@@ -13,6 +13,32 @@
 		margin-bottom: 20px;
 	}
 
+	&__logo {
+		display: flex;
+		flex-direction: column;
+		width: 258px;
+		height: 110px;
+		transition: width ease $tr,
+					height ease $tr;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			transition: transform ease $tr;
+		}
+
+		&:hover {
+			.footer__logo_top {
+				transform: translateX(-20px);
+			}
+
+			.footer__logo_bot {
+				transform: translateX(20px);
+			}
+		}
+	}
+
 	&__inner {
 		display: flex;
 		justify-content: space-between;
