@@ -1,0 +1,69 @@
+.event {
+	width: 300px;
+	min-height: 230px;
+	transition: scale ease $tr,
+		filter ease $tr;
+
+	&:hover {
+		scale: 1.04;
+		filter: brightness(150%);
+	}
+
+	&.visible {
+		animation: fade 0.5s forwards linear;
+
+		@keyframes fade {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+	}
+
+	&.static {
+		display: flex;
+		opacity: 1;
+	}
+
+	&__inner {
+		border-radius: $bord25;
+		border: 1px solid $black;
+		background-color: $white;
+		box-shadow: $shadow;
+		border-radius: $bord25;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__text {
+		color: $black;
+		text-align: center;
+		font-family: $ff;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 1;
+		text-align: center;
+		overflow: hidden;
+
+		&_wrapper {
+			padding: 20px;
+			
+		}
+	}
+
+	&__img {
+		width: 100%;
+		height: 150px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: $bord25;
+		}
+	}
+}

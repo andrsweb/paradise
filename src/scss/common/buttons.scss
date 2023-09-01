@@ -1,0 +1,14 @@
+.show__more {
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+	transition: scale ease $tr;
+
+	img {
+		transform: rotate(90deg);
+	}
+
+	&:active {
+		scale: 1.1;
+	}
+}

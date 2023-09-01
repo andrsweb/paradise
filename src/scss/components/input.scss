@@ -11,7 +11,8 @@
 	background-color: $input-bg;
 	padding: 15px 0;
 	text-align: center;
-	transition: box-shadow ease $tr;
+	transition: box-shadow ease $tr,
+				color ease $tr;
 
 	&::placeholder {
 		text-align: center;
@@ -26,5 +27,10 @@
 
 	&:focus {
 		box-shadow: 0px 7px 57px -13px rgba(0, 0, 0, 0.205) inset;
+		color: $black;
+
+		&::placeholder {
+			color: $black;
+		}
 	}
 }

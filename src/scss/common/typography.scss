@@ -20,8 +20,13 @@ h1, .h1 {
 	}
 }
 
-h2, .h2 {
-	font-size: 24px;
+h2, .h2, .hero__dates_town {
+	color: $black;
+	font-family: $ff;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: $fw-regular;
+	line-height: 1;
 
 	@media all and (min-width: $lg) {
 		font-size: 36px

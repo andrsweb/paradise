@@ -20,4 +20,50 @@
 		padding: 15px 12px 13px 13px;
 		position: relative;
 	}
+
+	&__dates {
+		margin-top: 22px;
+
+		&_town {
+			display: flex;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+
+		&_links, .hero__popular_links {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -20px;
+
+			.event {
+				padding: 0 20px;
+				width: calc(100% / 5);
+				margin-bottom: 30px;
+				display: none;
+
+				&.visible {
+					display: flex;
+				}
+
+				&.static {
+					display: flex;
+				}
+			}
+		}
+
+		.dates__button_wrapper {
+			margin-top: 20px;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	&__popular {
+		margin-top: 65px;
+
+		.h2 {
+			margin-bottom: 20px;
+		}
+	}
 }
