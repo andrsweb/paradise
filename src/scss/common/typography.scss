@@ -8,7 +8,12 @@ h3, .h3 {
 }
 
 h1, .h1 {
-	font-size: 32px;
+	color: $black;
+	font-family: $ff;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: $fw-regular;
+	line-height: $lh-title;
 
 	@media all and (min-width: $lg) {
 		font-size: 36px

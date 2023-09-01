@@ -11,9 +11,20 @@
 	background-color: $input-bg;
 	padding: 15px 0;
 	text-align: center;
+	transition: box-shadow ease $tr;
 
 	&::placeholder {
 		text-align: center;
 		opacity: 1;
+		color: $input-txt;
+		font-family: $ff;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 49.667%;
+	}
+
+	&:focus {
+		box-shadow: 0px 7px 57px -13px rgba(0, 0, 0, 0.205) inset;
 	}
 }
