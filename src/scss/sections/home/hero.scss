@@ -50,13 +50,6 @@
 				}
 			}
 		}
-
-		.dates__button_wrapper {
-			margin-top: 20px;
-			width: 100%;
-			display: flex;
-			justify-content: center;
-		}
 	}
 
 	&__popular {
@@ -66,4 +59,11 @@
 			margin-bottom: 20px;
 		}
 	}
+}
+
+.dates__button_wrapper {
+	margin-top: 20px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }

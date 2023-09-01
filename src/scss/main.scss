@@ -19,8 +19,11 @@
 @import 'sections/home/hero';
 @import 'sections/home/slider';
 
-// Home page sections styles.
+// Event page sections styles.
 @import 'sections/event/hero';
+
+// Artist page sections styles.
+@import 'sections/artist/artist';
 
 //For components
 @import 'components/input';

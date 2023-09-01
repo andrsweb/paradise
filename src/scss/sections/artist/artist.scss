@@ -1,0 +1,106 @@
+.hero__artist_info {
+	display: flex;
+	align-items: center;
+	padding: 34px 40px 5px 44px;
+
+	.artist__info_left {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50%;
+		min-height: 469px;
+		background-color: $grey;
+		padding: 10px;
+	}
+
+	.artist__info_right {
+		width: 50%;
+	}
+
+	.artist__info_links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.artist__info_link {
+		margin-bottom: 30px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.artist__info_desc {
+		color: $black;
+		text-align: center;
+		font-family: $ff;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 1;
+	}
+}
+
+.coming__events_wrapper {
+	margin-top: 20px;
+	border-radius: 25px;
+	border-bottom: 1px solid #000; 
+	box-shadow: $shadow;
+	padding: 34px 40px 5px 44px;
+
+	.h2 {
+		margin-bottom: 20px;
+	}
+
+	.coming__events {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.coming__event {
+		display: none;
+		padding: 20px 0;
+		border-top: 1px solid $black;
+		border-bottom: 1px solid $black;
+		margin-bottom: 20px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&.visible {
+			display: block;
+			animation: fade1 1s forwards linear;
+
+			@keyframes fade1 {
+				0% {
+					display: none;
+					opacity: 0;
+				}
+
+				1% {
+					display: block;
+				}
+
+				100% {
+					opacity: 1;
+				}
+			}
+		}
+
+		&_inner {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&_name, &_town, &_date {
+			color: $black;
+			font-family: $ff;
+			font-size: 36px;
+			font-style: normal;
+			font-weight: $fw-regular;
+			line-height: 1;
+		}
+	}
+}
