@@ -11,6 +11,8 @@ const swiperInit = (selector) => {
 	const slider = document.querySelector('.calendar__slider')
 	const next   = document.querySelector('.calendar__next')
 
+	if(!slider && !next) return
+
 	const swiper = new Swiper(selector, {
 		modules: [Navigation, EffectFade],
 
