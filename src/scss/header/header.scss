@@ -1,5 +1,32 @@
 .header {
 	padding: 36px 0 0;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	transition: padding ease $tr;
+
+	&.scrolled {
+		padding: 0;
+
+		.header__logo {
+			width: 150px;
+			height: 70px;
+		}
+
+		.header__wrapper {
+			padding: 10px 40px 10px 30px;
+			border-top-right-radius: 0;
+			border-top-left-radius: 0;
+		}
+
+		.header__search {
+			input {
+				padding: 5px 0;
+			}
+		}
+	}
 
 	&__wrapper {
 		display: flex;
@@ -11,11 +38,15 @@
 		background-color: $white;
 		box-shadow: $shadow;
 		position: relative;
+		transition: padding ease $tr,
+				border-radius ease 1s;
 	}
 
 	&__logo {
 		width: 258px;
 		height: 110px;
+		transition: width ease $tr,
+					height ease $tr;
 
 		img {
 			width: 100%;

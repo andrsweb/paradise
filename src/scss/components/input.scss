@@ -12,7 +12,8 @@
 	padding: 15px 0;
 	text-align: center;
 	transition: box-shadow ease $tr,
-				color ease $tr;
+				color ease $tr,
+				padding ease $tr;
 
 	&::placeholder {
 		text-align: center;
