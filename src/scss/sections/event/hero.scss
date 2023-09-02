@@ -16,9 +16,20 @@
 
 	.hero__advertisement {
 		padding: 0 20px;
-		width: calc(100% / 4);
-		height: 236px;
+		width: calc(100% / 1);
+		height: 150px;
 		transition: scale ease $tr;
+		margin-bottom: 20px;
+
+		@media all and (min-width: $md) {
+			height: 236px;
+			width: calc(100% / 2);
+		}
+
+		@media all and (min-width: $xxl) {
+			width: calc(100% / 4);
+			margin-bottom: 0;
+		}
 
 		img {
 			width: 100%;
@@ -40,10 +51,18 @@
 
 	&_img {
 		width: 100%;
-		height: 550px;
+		height: 300px;
 		border-radius: $bord25;
 		border: 1px solid $black;
 		position: relative;
+
+		@media all and (min-width: $md) {
+			height: 400px;
+		}
+
+		@media all and (min-width: $lg) {
+			height: 550px;
+		}
 
 
 		img {
@@ -56,25 +75,42 @@
 
 	&_items {
 		display: flex;
-		padding: 34px 40px 40px 44px;
+		flex-direction: column;
+		padding: 10px;
+
+		@media all and (min-width: $xl) {
+			flex-direction: row;
+			padding: 34px 40px 40px 44px;
+		}
 	}
 
 	&_left {
-		width: 50%;
+		width: 100%;
 		display: flex;
 		flex-direction: column;
+
+		@media all and (min-width: $xl) {
+			width: 50%;
+		}
 	}
 
 	.hero__desc_title {
 		color: $black;
 		text-align: center;
 		font-family: $ff;
-		font-size: 24px;
+		font-size: 18px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: 1;
 		text-align: center;
-		max-width: 576px;
+
+		@media all and (min-width: $md) {
+			font-size: 24px;
+		}
+
+		@media all and (min-width: $xl) {
+			max-width: 576px;
+		}
 	}
 
 	.hero__activity {
@@ -85,17 +121,28 @@
 		color: $black;
 		text-align: center;
 		font-family: $ff;
-		font-size: 24px;
+		font-size: 18px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: 27px;
 		min-height: 231px;
-		max-width: 563px;
 		margin: 30px 0;
+
+		@media all and (min-width: $md) {
+			font-size: 24px;
+		}
+
+		@media all and (min-width: $xl) {
+			max-width: 563px;
+		}
 	}
 
 	&_right {
-		width: 50%;
+		width: 100%;
+
+		@media all and (min-width: $xl) {
+			width: 50%;
+		}
 	}
 
 	&_links {
@@ -108,7 +155,7 @@
 		color: $black;
 		text-align: center;
 		font-family: $ff;
-		font-size: 24px;
+		font-size: 18px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: 1;
@@ -118,15 +165,24 @@
 		&:last-child {
 			margin-right: 0;
 		}
+
+		@media all and (min-width: $md) {
+			font-size: 24px;
+		}
 	}
 
 	.hero__link_wrapper {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		margin-bottom: 51px;
 
 		&:last-child {
 			margin-bottom: 0;
+		}
+
+		@media all and (min-width: $xl) {
+			flex-direction: row;
 		}
 	}
 
@@ -134,24 +190,36 @@
 		color: $black;
 		text-align: center;
 		font-family: $ff;
-		font-size: 24px;
+		font-size: 18px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: 1;
+
+		@media all and (min-width: $md) {
+			font-size: 24px;
+		}
 	}
 
 	.hero__places {
-		padding: 54px 34px;
+		padding: 10px;
 		background-color: #FDF8F8;
+
+		@media all and (min-width: $xl) {
+			padding: 54px 34px;
+		}
 
 		&_title {
 			font-family: $ff;
-			font-size: 24px;
+			font-size: 18px;
 			font-weight: $fw-regular;
 			line-height: 27px;
 			letter-spacing: 0em;
 			text-align: center;
 			margin-bottom: 78px;
+
+			@media all and (min-width: $md) {
+				font-size: 24px;
+			}
 		}
 
 		&_map {
@@ -159,22 +227,32 @@
 			justify-content: center;
 			align-items: center;
 			font-family: $ff;
-			font-size: 24px;
+			font-size: 18px;
 			font-weight: $fw-regular;
 			line-height: 27px;
 			letter-spacing: 0em;
 			text-align: center;
 			background-color: $dark;
 			padding: 60px;
-			height: 401px;
+			height: 301px;
+
+			@media all and (min-width: $md) {
+				font-size: 24px;
+				height: 401px;
+			}
 		}
 	}
 
 	.artist__link {
 		position: absolute;
-		left: 25px;
-		top: 33px;
+		left: 10px;
+		top: 10px;
 		z-index: 10;
+
+		@media all and (min-width: $md) {
+			left: 25px;
+			top: 33px;
+		}
 
 		.artist__name {
 			font-family: $ff;
@@ -191,7 +269,7 @@
 		left: 25px;
 		color: $white;
 		font-family: $ff;
-		font-size: 40px;
+		font-size: 20px;
 		font-weight: $fw-extra;
 		line-height: 1;
 		letter-spacing: 0em;
@@ -201,5 +279,17 @@
 		padding: 10px;
 		border-radius: $bord25;
 		border: 1px solid $black;
+
+		@media all and (min-width: $sm) {
+			font-size: 25px;
+		}
+
+		@media all and (min-width: $md) {
+			font-size: 30px;
+		}
+
+		@media all and (min-width: $lg) {
+			font-size: 40px;
+		}
 	}
 }

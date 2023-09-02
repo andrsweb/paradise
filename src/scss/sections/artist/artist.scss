@@ -1,20 +1,33 @@
 .hero__artist_info {
 	display: flex;
 	align-items: center;
-	padding: 34px 40px 5px 44px;
+	padding: 10px;
+
+	@media all and (min-width: $xl) {
+		padding: 34px 40px 5px 44px;
+	}
 
 	.artist__info_left {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 50%;
-		min-height: 469px;
+		width: 100%;
+		min-height: 269px;
 		background-color: $grey;
 		padding: 10px;
+
+		@media all and (min-width: lg) {
+			width: 50%;
+			min-height: 469px;
+		}
 	}
 
 	.artist__info_right {
-		width: 50%;
+		width: 100%;
+
+		@media all and (min-width: lg) {
+			width: 50%;
+		}
 	}
 
 	.artist__info_links {
@@ -47,7 +60,11 @@
 	border-radius: 25px;
 	border-bottom: 1px solid #000; 
 	box-shadow: $shadow;
-	padding: 34px 40px 5px 44px;
+	padding: 10px;
+
+	@media all and (min-width: lg) {
+		padding: 34px 40px 5px 44px;
+	}
 
 	.h2 {
 		margin-bottom: 20px;
@@ -97,10 +114,18 @@
 		&_name, &_town, &_date {
 			color: $black;
 			font-family: $ff;
-			font-size: 36px;
+			font-size: 15px;
 			font-style: normal;
 			font-weight: $fw-regular;
 			line-height: 1;
+
+			@media all and (min-width: $md) {
+				font-size: 20px;
+			}
+
+			@media all and (min-width: $lg) {
+				font-size: 36px;
+			}
 		}
 	}
 }
