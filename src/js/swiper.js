@@ -15,6 +15,7 @@ const swiperInit = (selector) => {
 
 	const swiper = new Swiper(selector, {
 		modules: [Navigation, EffectFade],
+		slidesPerView: 1,
 
 		navigation: {
 			nextEl: '.calendar__next',

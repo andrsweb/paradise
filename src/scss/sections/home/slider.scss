@@ -18,7 +18,6 @@
 	&_inner {
 		display: flex;
 		flex-direction: column;
-		width: 50%;
 
 		&:last-child {
 			margin-right: 0;
@@ -27,11 +26,6 @@
 
 	&_events {
 		display: flex;
-		flex-direction: column;
-
-		@media all and (min-width: $sm) {
-			flex-direction: row;
-		}
 	}
 
 	&_date {
@@ -60,14 +54,9 @@
 		border-radius: 50%;
 		background-color: $dark;
 		padding: 3px 0;
-		margin-bottom: 10px;
 		transition: background-color ease $tr;
 		cursor: pointer;
-
-		@media all and (min-width: $sm) {
-			margin-right: 5px;
-			margin-bottom: 0;
-		}
+		margin-right: 10px;
 
 		@media all and (min-width: $lg) {
 			margin-right: 17px;
@@ -136,9 +125,7 @@
 	height: 60px;
 	cursor: pointer;
 	border-radius: 50%;
-	transition: scale ease $tr,
-		opacity ease 1s,
-		visibility ease 1s;
+	transition: scale ease $tr;
 	z-index: 10;
 
 	&:active {
