@@ -1,0 +1,32 @@
+.hero__artists_wrapper {
+	padding: 34px 40px 5px 44px;
+
+	.h2 {
+		margin-bottom: 20px;
+	}
+}
+
+.hero__artists {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -20px;
+}
+
+.hero__artist {
+	width: calc(100% / 7);
+	padding: 0 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&_name {
+		color: $black;
+		font-family: $ff;
+		font-size: 36px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 1;
+		text-align: center;
+		margin-top: 10px;
+	}
+}
