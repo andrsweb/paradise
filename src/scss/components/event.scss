@@ -1,8 +1,12 @@
 .event {
 	width: 300px;
-	min-height: 230px;
+	min-height: 180px;
 	transition: scale ease $tr,
 		filter ease $tr;
+
+	@media all and (min-width: $md) {
+		min-height: 230px;
+	}
 
 	&:hover {
 		scale: 1.04;
@@ -42,16 +46,23 @@
 		color: $black;
 		text-align: center;
 		font-family: $ff;
-		font-size: 18px;
+		font-size: 14px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: 1;
 		text-align: center;
 		overflow: hidden;
 
+		@media all and (min-width: $md) {
+			font-size: 18px;
+		}
+
 		&_wrapper {
-			padding: 20px;
+			padding: 5px;
 			
+			@media all and (min-width: $md) {
+				padding: 20px;
+			}
 		}
 	}
 

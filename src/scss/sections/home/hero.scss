@@ -41,9 +41,17 @@
 
 			.event {
 				padding: 0 20px;
-				width: calc(100% / 5);
-				margin-bottom: 30px;
+				width: calc(100% / 1);
+				margin-bottom: 10px;
 				display: none;
+
+				@media all and (min-width: $sm) {
+					width: calc(100% / 2);
+				}
+
+				@media all and (min-width: $lg) {
+					width: calc(100% / 4);
+				}
 
 				&.visible {
 					display: flex;
@@ -52,15 +60,26 @@
 				&.static {
 					display: flex;
 				}
+
+				@media all and (min-width: $xxl) {
+					width: calc(100% / 5);
+					margin-bottom: 30px;
+				}
 			}
 		}
 	}
 
 	&__popular {
-		margin-top: 65px;
+		margin-top: 30px;
+		padding: 0 20px;
 
 		.h2 {
 			margin-bottom: 20px;
+		}
+
+		@media all and (min-width: $xxl) {
+			margin-top: 65px;
+			padding: 0;
 		}
 	}
 }
