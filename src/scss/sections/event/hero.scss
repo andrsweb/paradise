@@ -1,5 +1,9 @@
 .hero__event {
-	padding: 233px 0 10px;
+	padding: 180px 0 10px;
+
+	@media all and (min-width: $lg) {
+		padding: 233px 0 10px;
+	}
 
 	&_info {
 		border-radius: $bord25;
@@ -161,6 +165,7 @@
 		line-height: 1;
 		margin-right: 12px;
 		background-color: #FEF5F5;;
+		margin-bottom: 10px;
 
 		&:last-child {
 			margin-right: 0;
@@ -168,6 +173,7 @@
 
 		@media all and (min-width: $md) {
 			font-size: 24px;
+			margin-bottom: 0;
 		}
 	}
 
@@ -177,8 +183,10 @@
 		align-items: center;
 		margin-bottom: 51px;
 
-		&:last-child {
-			margin-bottom: 0;
+		@media all and (min-width: $lg) {
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 
 		@media all and (min-width: $xl) {

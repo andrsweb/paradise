@@ -40,6 +40,12 @@ ul {
 	width: 100%;
 	min-height: 100vh;
 	overflow: hidden;
+	
+
+	@media all and (min-width: $md) {
+		width: 80vw;
+		margin: 0 auto;
+	}
 
 	.footer {
 		margin-top: auto

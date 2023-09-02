@@ -6,6 +6,15 @@
 	}
 }
 
+.artists__event {
+	.coming__events_wrapper {
+
+		@media all and (min-width: $lg) {
+			padding: 10px 10px 10px 40px;
+		}
+	}
+}
+
 .hero__artists {
 	display: flex;
 	flex-wrap: wrap;
@@ -40,12 +49,13 @@
 		line-height: 1;
 		text-align: center;
 		margin-top: 10px;
+		max-width: 177px;
 
 		@media all and (min-width: $md) {
 			font-size: 20px;
 		}
 
-		@media all and (min-width: $xxl) {
+		@media all and (min-width: $xxxl) {
 			font-size: 36px;
 		}
 	}

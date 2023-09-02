@@ -1,5 +1,9 @@
 .hero {
-	padding: 233px 0 10px;
+	padding: 180px 0 10px;
+
+	@media all and (min-width: $lg) {
+		padding: 233px 0 10px;
+	}
 
 	&__items {
 		padding: 5px;
@@ -79,6 +83,10 @@
 
 		@media all and (min-width: $xxl) {
 			margin-top: 65px;
+		}
+
+		&.top {
+			margin-top: 0;
 			padding: 0;
 		}
 	}

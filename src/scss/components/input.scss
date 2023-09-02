@@ -39,13 +39,21 @@
 		}
 	}
 
-	@media all and (min-width: $sm) {
+	@media all and (min-width: $lg) {
 		width: 380px;
 	}
 
-	@media all and (min-width: $xl) {
-		width: 532px;
+	@media all and (min-width: $xxl) {
+		width: 420px;
 		font-size: 24px;
 		padding: 15px 0;
+	}
+
+	@media all and (min-width: 1700px) {
+		width: 500px;
+	}
+
+	@media all and (min-width: 1800px) {
+		width: 532px;
 	}
 }
