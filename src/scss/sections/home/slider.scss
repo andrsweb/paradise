@@ -1,10 +1,13 @@
-
 .calendar__slider {
 	position: relative;
 	transition: padding-left ease 1s;
 
 	&.additional-padding {
-		padding-left: 100px;
+		padding-left: 50px;
+
+		@media all and (min-width: $xxl) {
+			padding-left: 100px;
+		}
 	}
 }
 
@@ -24,7 +27,11 @@
 
 	&_events {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
+
+		@media all and (min-width: $sm) {
+			flex-direction: row;
+		}
 	}
 
 	&_date {
@@ -34,35 +41,64 @@
 	&_month {
 		color: $input-txt;
 		font-family: $ff;
-		font-size: 24px;
+		font-size: 14px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: 1;
 		margin-bottom: 20px;
+
+		@media all and (min-width: $lg) {
+			font-size: 24px;
+		}
 	}
 
 	&_item {
 		display: flex;
 		justify-content: center;
-		width: 51px;
-		height: 51px;
+		width: 31px;
+		height: 31px;
 		border-radius: 50%;
 		background-color: $dark;
-		padding: 7px 0;
-		margin-right: 10px;
+		padding: 3px 0;
+		margin-bottom: 10px;
 		transition: background-color ease $tr;
 		cursor: pointer;
 
-		&:nth-child(2n) {
-			margin-right: 27px;
+		@media all and (min-width: $sm) {
+			margin-right: 5px;
+			margin-bottom: 0;
+		}
+
+		@media all and (min-width: $lg) {
+			margin-right: 17px;
+
+			&:nth-child(2n) {
+				margin-right: 10px;
+			}
+			
+		}
+
+		@media all and (min-width: $xxl) {
+			margin-right: 17px;
+			padding: 7px 0;
+
+			&:nth-child(2n) {
+				margin-right: 15px;
+			}
 		}
 
 		&:hover {
 			background-color: $black;
 
-			.calendar__slide_weekday, .calendar__slide_day {
+			.calendar__slide_weekday,
+			.calendar__slide_day {
 				color: $white;
 			}
+		}
+
+		@media all and (min-width: $md) {
+			width: 51px;
+			height: 51px;
 		}
 	}
 
@@ -71,14 +107,19 @@
 		flex-direction: column;
 	}
 
-	&_day, &_weekday {
+	&_day,
+	&_weekday {
 		color: $black;
 		font-family: $ff;
-		font-size: 14px;
+		font-size: 10px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: 1;
 		transition: color ease $tr;
+
+		@media all and (min-width: $md) {
+			font-size: 14px;
+		}
 	}
 
 	&_day {
@@ -86,8 +127,9 @@
 	}
 }
 
-.calendar__prev, .calendar__next {
-	display: flex;
+.calendar__prev,
+.calendar__next {
+	display: none;
 	justify-content: center;
 	align-items: center;
 	width: 60px;
@@ -95,12 +137,16 @@
 	cursor: pointer;
 	border-radius: 50%;
 	transition: scale ease $tr,
-				opacity ease 1s,
-				visibility ease 1s;
+		opacity ease 1s,
+		visibility ease 1s;
 	z-index: 10;
 
 	&:active {
 		scale: 1.1;
+	}
+
+	@media all and (min-width: $lg) {
+		display: flex;
 	}
 }
 
