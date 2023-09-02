@@ -1,15 +1,15 @@
 .input {
-	width: 532px;
+	width: 232px;
 	color: $input-txt;
 	font-family: $ff;
-	font-size: 24px;
+	font-size: 18px;
 	font-style: normal;
 	font-weight: $fw-regular;
-	line-height: 49.667%;
+	line-height: 1;
 	border-radius: $bord9;
 	border: 0.745px solid rgba(0, 0, 0, 0.10);
 	background-color: $input-bg;
-	padding: 15px 0;
+	padding: 7px 0;
 	text-align: center;
 	transition: box-shadow ease $tr,
 				color ease $tr,
@@ -20,10 +20,14 @@
 		opacity: 1;
 		color: $input-txt;
 		font-family: $ff;
-		font-size: 24px;
+		font-size: 18px;
 		font-style: normal;
 		font-weight: $fw-regular;
-		line-height: 49.667%;
+		line-height: 1;
+
+		@media all and (min-width: $lg) {
+			font-size: 24px;
+		}
 	}
 
 	&:focus {
@@ -33,5 +37,15 @@
 		&::placeholder {
 			color: $black;
 		}
+	}
+
+	@media all and (min-width: $sm) {
+		width: 380px;
+	}
+
+	@media all and (min-width: $xl) {
+		width: 532px;
+		font-size: 24px;
+		padding: 15px 0;
 	}
 }

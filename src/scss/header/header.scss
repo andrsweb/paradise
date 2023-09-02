@@ -1,5 +1,5 @@
 .header {
-	padding: 36px 0 0;
+	padding: 10px 0 0;
 	position: fixed;
 	width: 100%;
 	left: 0;
@@ -7,18 +7,27 @@
 	z-index: 100;
 	transition: padding ease $tr;
 
+	@media all and (min-width: $lg) {
+		padding: 36px 0 0;
+	}
+
 	&.scrolled {
 		padding: 0;
 
-		.header__logo {
-			width: 150px;
-			height: 70px;
+		@media all and (min-width: $lg) {
+			.header__logo {
+				width: 150px;
+				height: 70px;
+			}
 		}
 
 		.header__wrapper {
-			padding: 10px 40px 10px 30px;
 			border-top-right-radius: 0;
 			border-top-left-radius: 0;
+
+			@media all and (min-width: $lg) {
+				padding: 10px 40px 10px 30px;
+			}
 		}
 
 		.header__search {
@@ -32,7 +41,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 18px 90px 17px 44px;
+		padding: 10px;
 		border-radius: $bord25;
 		border: 1px solid $black;
 		background-color: $white;
@@ -40,13 +49,17 @@
 		position: relative;
 		transition: padding ease $tr,
 				border-radius ease 1s;
+
+		@media all and (min-width: $lg) {
+			padding: 18px 90px 17px 44px;
+		}
 	}
 
 	&__logo {
 		display: flex;
 		flex-direction: column;
-		width: 258px;
-		height: 110px;
+		width: 110px;
+		height: 50px;
 		transition: width ease $tr,
 					height ease $tr;
 
@@ -59,25 +72,50 @@
 
 		&:hover {
 			.header__logo_top {
-				transform: translateX(-20px);
+				transform: translateX(-5px);
+
+				@media all and (min-width: $lg) {
+					transform: translateX(-20px);
+				}
 			}
 
 			.header__logo_bot {
-				transform: translateX(20px);
+				transform: translateX(5px);
+
+				@media all and (min-width: $lg) {
+					transform: translateX(-20px);
+				}
 			}
+		}
+
+		@media all and (min-width: $xxl) {
+			width: 258px;
+			height: 110px;
 		}
 	}
 
 	&__ui {
 		display: flex;
-		align-items: center;
+		flex-direction: column;
+		align-items: flex-end;
+
+		@media all and (min-width: $xxl) {
+			flex-direction: row;
+			align-items: center;
+		}
 	}
 
 	&__search {
 		position: absolute;
 		left: 50%;
-		top: 50%;
-		transform: translate(-50%,-50%);
+		top: 80px;
+		transform: translateX(-50%);
+
+		@media all and (min-width: $md) {
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+		}
 	}
 
 	&__geo {
@@ -87,10 +125,10 @@
 		.town {
 			color: $black;
 			font-family: $ff;
-			font-size: 24px;
+			font-size: 18px;
 			font-style: normal;
 			font-weight: $fw-regular;
-			line-height: 49.667%;
+			line-height: 1;
 			cursor: pointer;
 			transition: opacity ease $tr;
 			margin-left: 12px;
@@ -98,15 +136,22 @@
 			&:hover {
 				opacity: $op;
 			}
+
+			@media all and (min-width: $lg) {
+				font-size: 24px;
+			}
+		}
+
+		img {
+			width: 30px;
+			height: 30px;
 		}
 	}
 
 	&__lang {
-		margin-left: 52px;
-		font-size: 24px;
+		font-size: 18px;
 		color: rgb(56, 56, 56);
 		font-family: $ff;
-		font-size: 24px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: 1;
@@ -125,6 +170,11 @@
 			&:hover {
 				opacity: $op;
 			}
+		}
+
+		@media all and (min-width: $lg) {
+			font-size: 24px;
+			margin-left: 52px;
 		}
 	}
 }
